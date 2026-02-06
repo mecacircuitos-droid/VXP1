@@ -168,7 +168,7 @@ XP_CSS = r"""
 /* Hide Streamlit chrome */
 [data-testid="stHeader"], [data-testid="stToolbar"], #MainMenu {
   display: none !important;
-}
+
 # Ensure icons present in session_state
 if 'vxp_icons_b64' not in st.session_state:
     st.session_state.vxp_icons_b64 = _VXP_ICONS_B64.copy()
