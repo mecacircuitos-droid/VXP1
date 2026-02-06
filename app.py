@@ -169,7 +169,9 @@ XP_CSS = r"""
 [data-testid="stHeader"], [data-testid="stToolbar"], #MainMenu {
   display: none !important;
 }
-footer {visibility: hidden;}
+# Ensure icons present in session_state
+if 'vxp_icons_b64' not in st.session_state:
+    st.session_state.vxp_icons_b64 = _VXP_ICONS_B64.copy()
 
 /* Page background */
 html, body, [data-testid="stAppViewContainer"] {
